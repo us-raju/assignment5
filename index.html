@@ -47,7 +47,7 @@
             <div
               class="flex items-center px-[10px] py-[5px] bg-[#41FF6B10] rounded-[15px] sm:rounded-[50px] sm:px-[20px] sm:py-[10px]"
             >
-              <span class="text-[16px] text-black font-bold">0</span>
+              <span class="heart_icon text-[16px] text-black font-bold">0</span>
               <img
                 class="w-[20px] ml-[5px] sm:w-[30px] sm:ml-[10px]"
                 src="./assets/images/heart.png"
@@ -57,7 +57,7 @@
             <div
               class="flex items-center px-[10px] py-[5px] mx-[10px] sm:mx-[20px] sm:px-[20px] sm:py-[10px] bg-[#41FF6B10] rounded-[15px] sm:rounded-[50px]"
             >
-              <span class="text-[16px] text-black font-bold">100</span>
+              <span class="coin text-[16px] text-black font-bold">100</span>
               <img
                 class="w-[20px] ml-[5px] sm:w-[30px] sm:ml-[10px]"
                 src="./assets/images/coin.png"
@@ -67,7 +67,7 @@
             <div
               class="flex items-center px-[10px] py-[5px] sm:px-[20px] sm:py-[10px] bg-[#00A63E] text-[14px] sm:text-[16px] font-semibold text-white rounded-[15px] sm:rounded-[50px]"
             >
-              <span>0</span>
+              <span id="copyCount">0</span>
               <p class="ml-[5px] sm:ml-[10px]">Copy</p>
             </div>
           </div>
@@ -111,18 +111,20 @@
                     src="./assets/images/emergency.png"
                     alt=""
                   />
-                  <span class="w-20px text-[#5C5C5C]"
-                    ><i class="fa-regular fa-heart"></i
+                  <span class="w-20px text-[#5C5C5C] cursor-pointer"
+                    ><i class="wishlist fa-regular fa-heart"></i
                   ></span>
                 </div>
                 <div class="mid mb-[10px]">
                   <h3 class="text-[18px] font-bold text-[#111111]">
                     জাতীয় জরুরি সেবা
                   </h3>
-                  <p class="text-[14px] text-[#5C5C5C]">National Emergency</p>
+                  <p class="mini_title text-[14px] text-[#5C5C5C]">
+                    National Emergency Service
+                  </p>
                 </div>
                 <div class="lower_mid mb-[10px]">
-                  <h1 class="text-[26px] font-bold text-[#111111]">999</h1>
+                  <h2 class="num text-[26px] font-bold text-[#111111]">999</h2>
                   <p
                     class="text-[14px] text-[#5C5C5C] py-[6px] px-[16px] bg-[#F2F2F2] inline-block rounded-[25px]"
                   >
@@ -132,7 +134,7 @@
                 <div class="buttons text-[14px]">
                   <button
                     type="button"
-                    class="text-[#5C5C5C] mr-[8px] py-[8px] px-[40px] border border-[#D4D6D5] rounded-[8px] cursor-pointer"
+                    class="copyBtn text-[#5C5C5C] mr-[8px] py-[8px] px-[40px] border border-[#D4D6D5] rounded-[8px] hover:bg-[#111111] hover:text-white cursor-pointer"
                   >
                     <span class="mr-[5px]"
                       ><i class="fa-regular fa-copy"></i> </span
@@ -140,7 +142,7 @@
                   </button>
                   <button
                     type="button"
-                    class="text-white py-[8px] px-[40px] bg-[#00A63E] rounded-[8px] cursor-pointer"
+                    class="phonBtn text-white py-[8px] px-[40px] bg-[#00A63E] rounded-[8px] hover:bg-[#5C5C5C] cursor-pointer"
                   >
                     <span class="mr-[5px]"
                       ><i class="fa-solid fa-phone"></i
@@ -160,16 +162,16 @@
                     src="./assets/images/police.png"
                     alt=""
                   />
-                  <span class="w-20px text-[#5C5C5C]"
-                    ><i class="fa-regular fa-heart"></i
+                  <span class="w-20px text-[#5C5C5C] cursor-pointer"
+                    ><i class="wishlist fa-regular fa-heart"></i
                   ></span>
                 </div>
                 <div class="mid mb-[10px]">
                   <h3 class="text-[18px] font-bold text-[#111111]">পুলিশ</h3>
-                  <p class="text-[14px] text-[#5C5C5C]">Police</p>
+                  <p class="mini_title text-[14px] text-[#5C5C5C]">Police</p>
                 </div>
                 <div class="lower_mid mb-[10px]">
-                  <h1 class="text-[26px] font-bold text-[#111111]">999</h1>
+                  <h2 class="num text-[26px] font-bold text-[#111111]">999</h2>
                   <p
                     class="text-[14px] text-[#5C5C5C] py-[6px] px-[16px] bg-[#F2F2F2] inline-block rounded-[25px]"
                   >
@@ -179,7 +181,7 @@
                 <div class="buttons text-[14px]">
                   <button
                     type="button"
-                    class="text-[#5C5C5C] mr-[8px] py-[8px] px-[40px] border border-[#D4D6D5] rounded-[8px] cursor-pointer"
+                    class="copyBtn text-[#5C5C5C] mr-[8px] py-[8px] px-[40px] border border-[#D4D6D5] rounded-[8px] hover:bg-[#111111] hover:text-white cursor-pointer"
                   >
                     <span class="mr-[5px]"
                       ><i class="fa-regular fa-copy"></i> </span
@@ -187,7 +189,7 @@
                   </button>
                   <button
                     type="button"
-                    class="text-white py-[8px] px-[40px] bg-[#00A63E] rounded-[8px] cursor-pointer"
+                    class="phonBtn text-white py-[8px] px-[40px] bg-[#00A63E] rounded-[8px] hover:bg-[#5C5C5C] cursor-pointer"
                   >
                     <span class="mr-[5px]"
                       ><i class="fa-solid fa-phone"></i
@@ -207,18 +209,20 @@
                     src="./assets/images/fire-service.png"
                     alt=""
                   />
-                  <span class="w-20px text-[#5C5C5C]"
-                    ><i class="fa-regular fa-heart"></i
+                  <span class="w-20px text-[#5C5C5C] cursor-pointer"
+                    ><i class="wishlist fa-regular fa-heart"></i
                   ></span>
                 </div>
                 <div class="mid mb-[10px]">
                   <h3 class="text-[18px] font-bold text-[#111111]">
                     ফায়ার সার্ভিস
                   </h3>
-                  <p class="text-[14px] text-[#5C5C5C]">Fire Service</p>
+                  <p class="mini_title text-[14px] text-[#5C5C5C]">
+                    Fire Service
+                  </p>
                 </div>
                 <div class="lower_mid mb-[10px]">
-                  <h1 class="text-[26px] font-bold text-[#111111]">999</h1>
+                  <h2 class="num text-[26px] font-bold text-[#111111]">999</h2>
                   <p
                     class="text-[14px] text-[#5C5C5C] py-[6px] px-[16px] bg-[#F2F2F2] inline-block rounded-[25px]"
                   >
@@ -228,7 +232,7 @@
                 <div class="buttons text-[14px]">
                   <button
                     type="button"
-                    class="text-[#5C5C5C] mr-[8px] py-[8px] px-[40px] border border-[#D4D6D5] rounded-[8px] cursor-pointer"
+                    class="copyBtn text-[#5C5C5C] mr-[8px] py-[8px] px-[40px] border border-[#D4D6D5] rounded-[8px] hover:bg-[#111111] hover:text-white cursor-pointer"
                   >
                     <span class="mr-[5px]"
                       ><i class="fa-regular fa-copy"></i> </span
@@ -236,7 +240,7 @@
                   </button>
                   <button
                     type="button"
-                    class="text-white py-[8px] px-[40px] bg-[#00A63E] rounded-[8px] cursor-pointer"
+                    class="phonBtn text-white py-[8px] px-[40px] bg-[#00A63E] rounded-[8px] hover:bg-[#5C5C5C] cursor-pointer"
                   >
                     <span class="mr-[5px]"
                       ><i class="fa-solid fa-phone"></i
@@ -256,20 +260,20 @@
                     src="./assets/images/ambulance.png"
                     alt=""
                   />
-                  <span class="w-20px text-[#5C5C5C]"
-                    ><i class="fa-regular fa-heart"></i
+                  <span class="w-20px text-[#5C5C5C] cursor-pointer"
+                    ><i class="wishlist fa-regular fa-heart"></i
                   ></span>
                 </div>
                 <div class="mid mb-[10px]">
                   <h3 class="text-[18px] font-bold text-[#111111]">
                     অ্যাম্বুলেন্স
                   </h3>
-                  <p class="text-[14px] text-[#5C5C5C]">Ambulance</p>
+                  <p class="mini_title text-[14px] text-[#5C5C5C]">Ambulance</p>
                 </div>
                 <div class="lower_mid mb-[10px]">
-                  <h1 class="text-[26px] font-bold text-[#111111]">
+                  <h2 class="num text-[26px] font-bold text-[#111111]">
                     1994-999999
-                  </h1>
+                  </h2>
                   <p
                     class="text-[14px] text-[#5C5C5C] py-[6px] px-[16px] bg-[#F2F2F2] inline-block rounded-[25px]"
                   >
@@ -279,7 +283,7 @@
                 <div class="buttons text-[14px]">
                   <button
                     type="button"
-                    class="text-[#5C5C5C] mr-[8px] py-[8px] px-[40px] border border-[#D4D6D5] rounded-[8px] cursor-pointer"
+                    class="copyBtn text-[#5C5C5C] mr-[8px] py-[8px] px-[40px] border border-[#D4D6D5] rounded-[8px] hover:bg-[#111111] hover:text-white cursor-pointer"
                   >
                     <span class="mr-[5px]"
                       ><i class="fa-regular fa-copy"></i> </span
@@ -287,7 +291,7 @@
                   </button>
                   <button
                     type="button"
-                    class="text-white py-[8px] px-[40px] bg-[#00A63E] rounded-[8px] cursor-pointer"
+                    class="phonBtn text-white py-[8px] px-[40px] bg-[#00A63E] rounded-[8px] hover:bg-[#5C5C5C] cursor-pointer"
                   >
                     <span class="mr-[5px]"
                       ><i class="fa-solid fa-phone"></i
@@ -307,20 +311,20 @@
                     src="./assets/images/emergency.png"
                     alt=""
                   />
-                  <span class="w-20px text-[#5C5C5C]"
-                    ><i class="fa-regular fa-heart"></i
+                  <span class="w-20px text-[#5C5C5C] cursor-pointer"
+                    ><i class="wishlist fa-regular fa-heart"></i
                   ></span>
                 </div>
                 <div class="mid mb-[10px]">
                   <h3 class="text-[18px] font-bold text-[#111111]">
                     নারী ও শিশু সহায়তা
                   </h3>
-                  <p class="text-[14px] text-[#5C5C5C]">
+                  <p class="mini_title text-[14px] text-[#5C5C5C]">
                     Women & Child Helpline
                   </p>
                 </div>
                 <div class="lower_mid mb-[10px]">
-                  <h1 class="text-[26px] font-bold text-[#111111]">109</h1>
+                  <h2 class="num text-[26px] font-bold text-[#111111]">109</h2>
                   <p
                     class="text-[14px] text-[#5C5C5C] py-[6px] px-[16px] bg-[#F2F2F2] inline-block rounded-[25px]"
                   >
@@ -330,7 +334,7 @@
                 <div class="buttons text-[14px]">
                   <button
                     type="button"
-                    class="text-[#5C5C5C] mr-[8px] py-[8px] px-[40px] border border-[#D4D6D5] rounded-[8px] cursor-pointer"
+                    class="copyBtn text-[#5C5C5C] mr-[8px] py-[8px] px-[40px] border border-[#D4D6D5] rounded-[8px] hover:bg-[#111111] hover:text-white cursor-pointer"
                   >
                     <span class="mr-[5px]"
                       ><i class="fa-regular fa-copy"></i> </span
@@ -338,7 +342,7 @@
                   </button>
                   <button
                     type="button"
-                    class="text-white py-[8px] px-[40px] bg-[#00A63E] rounded-[8px] cursor-pointer"
+                    class="phonBtn text-white py-[8px] px-[40px] bg-[#00A63E] rounded-[8px] hover:bg-[#5C5C5C] cursor-pointer"
                   >
                     <span class="mr-[5px]"
                       ><i class="fa-solid fa-phone"></i
@@ -358,16 +362,18 @@
                     src="./assets/images/emergency.png"
                     alt=""
                   />
-                  <span class="w-20px text-[#5C5C5C]"
-                    ><i class="fa-regular fa-heart"></i
+                  <span class="w-20px text-[#5C5C5C] cursor-pointer"
+                    ><i class="wishlist fa-regular fa-heart"></i
                   ></span>
                 </div>
                 <div class="mid mb-[10px]">
                   <h3 class="text-[18px] font-bold text-[#111111]">দুদক</h3>
-                  <p class="text-[14px] text-[#5C5C5C]">Anti-Corruption</p>
+                  <p class="mini_title text-[14px] text-[#5C5C5C]">
+                    Anti-Corruption
+                  </p>
                 </div>
                 <div class="lower_mid mb-[10px]">
-                  <h1 class="text-[26px] font-bold text-[#111111]">106</h1>
+                  <h2 class="num text-[26px] font-bold text-[#111111]">106</h2>
                   <p
                     class="text-[14px] text-[#5C5C5C] py-[6px] px-[16px] bg-[#F2F2F2] inline-block rounded-[25px]"
                   >
@@ -377,7 +383,7 @@
                 <div class="buttons text-[14px]">
                   <button
                     type="button"
-                    class="text-[#5C5C5C] mr-[8px] py-[8px] px-[40px] border border-[#D4D6D5] rounded-[8px] cursor-pointer"
+                    class="copyBtn text-[#5C5C5C] mr-[8px] py-[8px] px-[40px] border border-[#D4D6D5] rounded-[8px] hover:bg-[#111111] hover:text-white cursor-pointer"
                   >
                     <span class="mr-[5px]"
                       ><i class="fa-regular fa-copy"></i> </span
@@ -385,7 +391,7 @@
                   </button>
                   <button
                     type="button"
-                    class="text-white py-[8px] px-[40px] bg-[#00A63E] rounded-[8px] cursor-pointer"
+                    class="phonBtn text-white py-[8px] px-[40px] hover:bg-[#5C5C5C] bg-[#00A63E] rounded-[8px] cursor-pointer"
                   >
                     <span class="mr-[5px]"
                       ><i class="fa-solid fa-phone"></i
@@ -405,18 +411,22 @@
                     src="./assets/images/emergency.png"
                     alt=""
                   />
-                  <span class="w-20px text-[#5C5C5C]"
-                    ><i class="fa-regular fa-heart"></i
+                  <span class="w-20px text-[#5C5C5C] cursor-pointer"
+                    ><i class="wishlist fa-regular fa-heart"></i
                   ></span>
                 </div>
                 <div class="mid mb-[10px]">
                   <h3 class="text-[18px] font-bold text-[#111111]">
                     বিদ্যুৎ বিভ্রাট
                   </h3>
-                  <p class="text-[14px] text-[#5C5C5C]">Electricity Outage</p>
+                  <p class="mini_title text-[14px] text-[#5C5C5C]">
+                    Electricity Outage
+                  </p>
                 </div>
                 <div class="lower_mid mb-[10px]">
-                  <h1 class="text-[26px] font-bold text-[#111111]">16216</h1>
+                  <h2 class="num text-[26px] font-bold text-[#111111]">
+                    16216
+                  </h2>
                   <p
                     class="text-[14px] text-[#5C5C5C] py-[6px] px-[16px] bg-[#F2F2F2] inline-block rounded-[25px]"
                   >
@@ -426,7 +436,7 @@
                 <div class="buttons text-[14px]">
                   <button
                     type="button"
-                    class="text-[#5C5C5C] mr-[8px] py-[8px] px-[40px] border border-[#D4D6D5] rounded-[8px] cursor-pointer"
+                    class="copyBtn text-[#5C5C5C] mr-[8px] py-[8px] px-[40px] border border-[#D4D6D5] rounded-[8px] hover:bg-[#111111] hover:text-white cursor-pointer"
                   >
                     <span class="mr-[5px]"
                       ><i class="fa-regular fa-copy"></i> </span
@@ -434,7 +444,7 @@
                   </button>
                   <button
                     type="button"
-                    class="text-white py-[8px] px-[40px] bg-[#00A63E] rounded-[8px] cursor-pointer"
+                    class="phonBtn text-white py-[8px] px-[40px] bg-[#00A63E] rounded-[8px] hover:bg-[#5C5C5C] cursor-pointer"
                   >
                     <span class="mr-[5px]"
                       ><i class="fa-solid fa-phone"></i
@@ -454,16 +464,18 @@
                     src="./assets/images/emergency.png"
                     alt=""
                   />
-                  <span class="w-20px text-[#5C5C5C]"
-                    ><i class="fa-regular fa-heart"></i
+                  <span class="w-20px text-[#5C5C5C] cursor-pointer"
+                    ><i class="wishlist fa-regular fa-heart"></i
                   ></span>
                 </div>
                 <div class="mid mb-[10px]">
                   <h3 class="text-[18px] font-bold text-[#111111]">ব্র্যাক</h3>
-                  <p class="text-[14px] text-[#5C5C5C]">Brac</p>
+                  <p class="mini_title text-[14px] text-[#5C5C5C]">Brac</p>
                 </div>
                 <div class="lower_mid mb-[10px]">
-                  <h1 class="text-[26px] font-bold text-[#111111]">16445</h1>
+                  <h2 class="num text-[26px] font-bold text-[#111111]">
+                    16445
+                  </h2>
                   <p
                     class="text-[14px] text-[#5C5C5C] py-[6px] px-[16px] bg-[#F2F2F2] inline-block rounded-[25px]"
                   >
@@ -473,7 +485,7 @@
                 <div class="buttons text-[14px]">
                   <button
                     type="button"
-                    class="text-[#5C5C5C] mr-[8px] py-[8px] px-[40px] border border-[#D4D6D5] rounded-[8px] cursor-pointer"
+                    class="copyBtn text-[#5C5C5C] mr-[8px] py-[8px] px-[40px] border border-[#D4D6D5] rounded-[8px] hover:bg-[#111111] hover:text-white cursor-pointer"
                   >
                     <span class="mr-[5px]"
                       ><i class="fa-regular fa-copy"></i> </span
@@ -481,7 +493,7 @@
                   </button>
                   <button
                     type="button"
-                    class="text-white py-[8px] px-[40px] bg-[#00A63E] rounded-[8px] cursor-pointer"
+                    class="phonBtn text-white py-[8px] px-[40px] bg-[#00A63E] rounded-[8px] hover:bg-[#5C5C5C] cursor-pointer"
                   >
                     <span class="mr-[5px]"
                       ><i class="fa-solid fa-phone"></i
@@ -501,18 +513,20 @@
                     src="./assets/images/emergency.png"
                     alt=""
                   />
-                  <span class="w-20px text-[#5C5C5C]"
-                    ><i class="fa-regular fa-heart"></i
+                  <span class="w-20px text-[#5C5C5C] cursor-pointer"
+                    ><i class="wishlist fa-regular fa-heart"></i
                   ></span>
                 </div>
                 <div class="mid mb-[10px]">
                   <h3 class="text-[18px] font-bold text-[#111111]">
                     বাংলাদেশ রেলওয়ে
                   </h3>
-                  <p class="text-[14px] text-[#5C5C5C]">Bangladesh Railway</p>
+                  <p class="mini_title text-[14px] text-[#5C5C5C]">
+                    Bangladesh Railway
+                  </p>
                 </div>
                 <div class="lower_mid mb-[10px]">
-                  <h1 class="text-[26px] font-bold text-[#111111]">163</h1>
+                  <h2 class="num text-[26px] font-bold text-[#111111]">163</h2>
                   <p
                     class="text-[14px] text-[#5C5C5C] py-[6px] px-[16px] bg-[#F2F2F2] inline-block rounded-[25px]"
                   >
@@ -522,7 +536,7 @@
                 <div class="buttons text-[14px]">
                   <button
                     type="button"
-                    class="text-[#5C5C5C] mr-[8px] py-[8px] px-[40px] border border-[#D4D6D5] rounded-[8px] cursor-pointer"
+                    class="copyBtn text-[#5C5C5C] mr-[8px] py-[8px] px-[40px] border border-[#D4D6D5] rounded-[8px] hover:bg-[#111111] hover:text-white cursor-pointer"
                   >
                     <span class="mr-[5px]"
                       ><i class="fa-regular fa-copy"></i> </span
@@ -530,7 +544,7 @@
                   </button>
                   <button
                     type="button"
-                    class="text-white py-[8px] px-[40px] bg-[#00A63E] rounded-[8px] cursor-pointer"
+                    class="phonBtn text-white py-[8px] px-[40px] bg-[#00A63E] rounded-[8px] hover:bg-[#5C5C5C] cursor-pointer"
                   >
                     <span class="mr-[5px]"
                       ><i class="fa-solid fa-phone"></i
@@ -546,25 +560,31 @@
               class="history_container bg-white drop-shadow-[0_2px_3px_rgba(0,0,0,0.15)] p-[15px] rounded-[12px]"
             >
               <div class="history_info_container h-[100vh]">
-                <div class="history_heading flex justify-between items-center mb-[15px]">
+                <div
+                  class="history_heading flex justify-between items-center mb-[15px]"
+                >
                   <div class="flex items-center">
-                    <span class="mr-2 text-[18px] text-[#5C5C5C]"><i class="fa-regular fa-clock"></i></span>
-                    <h4 class="text-[18px] font-medium text-[#111111]">Call History</h4>
+                    <span class="mr-2 text-[18px] text-[#5C5C5C]"
+                      ><i class="fa-regular fa-clock"></i
+                    ></span>
+                    <h4 class="text-[18px] font-medium text-[#111111]">
+                      Call History
+                    </h4>
                   </div>
-                  <button type="button" class="cursor-pointer text-[16px] text-white font-semibold bg-[#00A63E] py-2.5 px-5 rounded-[50px]">Clear</button>
+                  <button
+                    type="button"
+                    class="cursor-pointer hover:bg-[#5C5C5C] text-[16px] text-white font-semibold bg-[#00A63E] py-2.5 px-5 rounded-[50px]"
+                  >
+                    Clear
+                  </button>
                 </div>
-                <div class="history_info flex items-center justify-between bg-[#FAFAFA] p-3 rounded-lg mb-2">
-                    <div>
-                        <p class="text-[14px] text-[#111111]">জাতীয় জরুরি সেবা</p>
-                        <span class="text-[#5C5C5C] text-[14px]">999</span>
-                    </div>
-                    <div><span class="text-[14px] text-[#111111]">11:36:58 AM</span></div>
-                </div>
+                <div class="history_info"></div>
               </div>
             </div>
           </div>
         </div>
       </section>
     </main>
+    <script src="./assets/js/app.js"></script>
   </body>
 </html>
