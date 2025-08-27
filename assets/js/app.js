@@ -60,6 +60,7 @@ for (let i = 0; i < phonesBtn.length; i++) {
     let historySec = document.querySelector(".history_info");
     let date = new Date().toLocaleTimeString();
     let div = document.createElement("div");
+    let tempoDiv = div.classList.add("tempoDiv");
     div.innerHTML = `
           <div class="flex items-center justify-between bg-[#FAFAFA] p-3 rounded-lg mb-2">
                   <div>
@@ -74,3 +75,12 @@ for (let i = 0; i < phonesBtn.length; i++) {
     historySec.appendChild(div);
   });
 }
+
+// history clear functionality
+let clearBtn = document.querySelector(".clearBtn");
+clearBtn.addEventListener("click", function () {
+  let clearDiv = document.querySelectorAll(".tempoDiv");
+  for (let i = 0; i < clearDiv.length; i++) {
+    clearDiv[i].classList.add("hidden");
+  }
+});
