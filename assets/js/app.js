@@ -52,6 +52,7 @@ for (let i = 0; i < phonesBtn.length; i++) {
     let num = phoneNumber[i].innerText;
     if (coin < 20) {
       alert("আপনার পর্যাপ্ত কয়েন নেই ! কল করতে কমপক্ষে ২০ কয়েন লাগবে।");
+      return;
     } else {
       alert("Calling " + titleName + " " + num);
       coin -= deductCoin;
